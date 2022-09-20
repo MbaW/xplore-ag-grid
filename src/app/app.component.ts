@@ -44,4 +44,7 @@ export class AppComponent {
     console.log(event);
   }
 
+  clearSelection(){
+    this.agGrid.api.deselectAll();
+  }
 }
