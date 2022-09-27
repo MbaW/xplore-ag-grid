@@ -8,7 +8,10 @@ import { Observable } from 'rxjs';
 export class DataGridService {
   constructor(private http: HttpClient) {
   }
-  getRowData(): Observable<any[]>{
+  getCars(): Observable<any[]>{
     return this.http.get<any[]>('https://www.ag-grid.com/example-assets/row-data.json')
+  }
+  getAthletes(){
+    return this.http.get<any[]>('https://www.ag-grid.com/example-assets/olympic-winners.json')
   }
 }
