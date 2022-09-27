@@ -1,14 +1,14 @@
-<button (click)="clearSelection()">Clear Selection</button>
-
+<button (click)="clearSelection()" >Deselect all</button>
 <ag-grid-angular
-  class="ag-theme-alpine-dark"
   [style]="style"
-  [rowData]="rowData$ | async"
-  [columnDefs]="colDefs"
+  class="ag-theme-alpine-dark"
+  [columnDefs]="columnDefs"
   [defaultColDef]="defaultColDef"
-  [rowSelection]="'multiple'"
-  [animateRows]="true"
-  (cellClicked)="onCellClicked($event)"
+  [rowData]="rowData$ | async"
+  [components]="components"
+  [statusBar]="statusBar"
+  [sideBar]="sideBar"
+  (gridReady)="onGridReady($event)"
 >
 
 </ag-grid-angular>
